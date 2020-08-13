@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es" ng-app="ejemplo">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Hello, world!</title>
+    <style>
+        h1 {
+            font-weight: lighter;
+            color:white;
+        }
+        .jumbotron {
+            background: #3a3a3a;
+        }
+    </style>
+  </head>
+  <body ng-controller="control">
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Clase de Angular con Bootstrap</h1>
+            </div>
+            <div class="row">
+                <div class="panel panel-default col-sm-6 col-sm-offset-3">
+                    <div class="contenedor_izquierdo">
+                        <ul class="lista_canciones">
+                            <li class="cancion btn btn-primary btn-block">Cancion 1</li>
+                            <li class="cancion btn btn-primary btn-block">Cancion 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default col-sm-6 col-sm-offset-3">
+                    <div class="contenedor_derecho">
+                        <audio src="" class="audio" controls></audio>
+                    </div>
+                    <form action="/canciones" class="upload_form" enctype="multipart/form-data" method="post">
+                        Subir cancion:
+                        <input type="file" name="cancion">
+                        <button type="submit">Subir</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="/js/main.js"></script>
+  </body>
+</html>
